@@ -23,7 +23,7 @@ fig.subplots_adjust(bottom=0.75)
 
 ax_polar = fig.add_axes([0, 0.25, 1, 0.4], polar=True)
 ax_polar.set_rmax(5)
-line2, = ax_polar.plot(winding_freq*2*np.pi*t, f(t, 5, init_freq), lw=2)
+line2, = ax_polar.plot(-winding_freq*2*np.pi*t, f(t, 5, init_freq), lw=2)
 
 ax_freq = fig.add_axes([0.25, 0.05, 0.65, 0.03])
 freq_slider = Slider(
@@ -50,7 +50,7 @@ def update_freq(val):
 
 
 def update_winding(val):
-    line2.set_xdata(winding_slider.val * 2 * np.pi * t)
+    line2.set_xdata(-winding_slider.val * 2 * np.pi * t)
     fig.canvas.draw_idle()
 
 
