@@ -8,7 +8,7 @@ from matplotlib.widgets import Slider
 
 
 def f(t, amp, freq):
-    return amp * np.sin(2*np.pi*freq*t)
+    return amp * np.sin(2*np.pi*freq*t + np.pi/2)
 
 
 t = np.linspace(0, 5, 1000)
