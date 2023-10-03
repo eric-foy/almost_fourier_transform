@@ -30,7 +30,7 @@ freq_slider = Slider(
     ax=ax_freq,
     label='Frequency [Hz]',
     valmin=0.1,
-    valmax=30,
+    valmax=10,
     valinit=init_freq
 )
 
@@ -39,7 +39,7 @@ winding_slider = Slider(
     ax=ax_winding,
     label='Winding [Hz]',
     valmin=0.1,
-    valmax=30,
+    valmax=10,
     valinit=winding_freq
 )
 
